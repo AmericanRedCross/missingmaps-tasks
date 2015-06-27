@@ -1,0 +1,21 @@
+{
+  "name": "missingmaps-tasks",
+  "version": "0.0.0",
+  "authors": [
+    "Dan Joseph <daniel.joseph@redcross.org>"
+  ],
+  "license": "none",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "leaflet": "~0.7.3",
+    "bootstrap": "~3.3.5",
+    "jquery": "~1",
+    "d3": "~3.5.5"
+  }
+}
