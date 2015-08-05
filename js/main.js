@@ -26,11 +26,31 @@ function listTasks(element, index, array) {
 }
 
 function buildProjectSection(project_id, tasksObject) {
-  // console.log(tasksObject);
+  console.log(tasksObject);
+  var countof0 = 0;
+  var countof1 = 0;
+  var countof2 = 0;
+  var countTotal = 0;
+
+  $.each(tasksObject.features, function(index, feature){
+    // console.log(index);
+    // console.log(feature);
+    var thisState = feature.properties.state;
+    countTotal++
+    if (thisState === 2) {
+      countof2++
+    }
+  })
+console.log(countof0);
+console.log(countTotal)
+var percentComplete = Math.round((countof2/countTotal)*100);
+console.log(percentComplete)
+
   var sectionHtml = '<div class="row row-task"' + ' id="row' + project_id + '"' + '>' +
     '<div class="col-md-6">' +
       '<div class="">' +
         '<h4>Task #' + project_id + '</h4>' +
+        '<p>' + ' ' + percentComplete + '% ' + 'complete'+ '</p>' +
       '</div>' +
    '</div>' +
     '<div class="col-md-6">' +
@@ -38,6 +58,13 @@ function buildProjectSection(project_id, tasksObject) {
     '</div>' +
   '</div>';
   $("#tasksBlock").append(sectionHtml);
+
+
+
+
+
+
+
 
   // create basic leaflet map
   // ========================
